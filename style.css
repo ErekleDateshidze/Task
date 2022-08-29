@@ -3,17 +3,21 @@
     src: url(assets/fonts/HelveticaNeue.ttc);
 }
 
+:root {
+    --primarycolor: #62A1EB;
+    --secondarycolor: #fff;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    width: 1920px;
-    height: 1080px;
     font-family: 'HelveticaNeue';
+    overflow-x: hidden;
 }
 
 header {
     display: flex;
     justify-content: center;
+    margin-top: 79px;
 }
 
 .landing {
@@ -27,28 +31,21 @@ header {
     justify-content: center;
 }
 
-.top-logo {
-    margin-top: 79px;
+.btn-1,
+.btn-2 {
+    height: 60px;
+    width: 387px;
+    border: none;
+    border-radius: 8px;
+    padding: 18px 60px 18px 60px;
+    background-color: var(--primarycolor);
+    color: var(--secondarycolor);
 }
 
 .btn-1 {
     margin-top: 123px;
-    height: 60px;
-    width: 387px;
-    border: none;
-    border-radius: 8px;
-    padding: 18px 60px 18px 60px;
-    background-color: #62A1EB;
-    color: white;
 }
 
 .btn-2 {
-    margin-top: 23px;
-    height: 60px;
-    width: 387px;
-    border: none;
-    border-radius: 8px;
-    padding: 18px 60px 18px 60px;
-    background-color: #62A1EB;
-    color: white;
+    margin-top: 26px;
 }
