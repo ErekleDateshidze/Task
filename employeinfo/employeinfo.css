@@ -83,12 +83,11 @@ p {
     margin-top: 88px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 form .user-details .input-box {
-    margin-bottom: 52px;
-    margin: 63px;
+    margin-right: 63px;
 }
 
 .user-details .input-box .details {
@@ -98,7 +97,7 @@ form .user-details .input-box {
 }
 
 .user-details .input-box input {
-    width: 408px;
+    width: 407px;
     height: 60px;
     border-radius: 8px;
     border-color: var(--bordercolor);
@@ -107,6 +106,7 @@ form .user-details .input-box {
 
 
 .user-details .input-box select {
+    margin-top: 81px;
     width: 878px;
     height: 60px;
     border-radius: 8px;
