@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Helvetica Neue';
+    font-family: 'HelveticaNeue';
     src: url(assets/fonts/HelveticaNeue.ttc);
 }
 
@@ -12,11 +12,18 @@
     --bordercolor: #8AC0E2;
 }
 
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0%;
+}
+
+body {
     font-family: 'HelveticaNeue';
     overflow-x: hidden;
     background-color: var(--primarycolor);
+    max-width: 1920px;
+    max-height: 1080px;
 }
 
 
@@ -47,6 +54,7 @@ nav .container ul li {
     justify-content: center;
     list-style: none;
     margin-left: 61px;
+    margin-bottom: 42px;
     font-size: 20px;
     font-style: normal;
     font-weight: bold;
@@ -59,8 +67,8 @@ header a {
 }
 
 section {
-    width: 1226px;
-    height: 973px;
+    width: 62%;
+    height: 90%;
     margin-left: 357px;
     display: flex;
     justify-content: center;
@@ -100,14 +108,76 @@ form .user-details .input-box {
     width: 407px;
     height: 60px;
     border-radius: 8px;
-    border-color: var(--bordercolor);
+    border-color: #62A1EB;
+    padding-left: 16px;
+}
+
+.input-box-long {
+    margin-top: 48px;
+}
+
+form .user-details .input-box-long {
+    margin-right: 63px;
+}
+
+.user-details .input-box-long .details {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.user-details .input-box-long input {
+    width: 878px;
+    height: 60px;
+    border-radius: 8px;
+    border-color: #62A1EB;
+    padding-left: 16px;
+}
+
+.input-box select {
+    margin-top: 52px;
+    padding: 16px;
+    line-height: 21px;
+    width: 878px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    background-color: #EBEBEB;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-details .input-box .input-long {
+    width: 878px;
+    height: 60px;
+    border-radius: 8px;
+    border-color: #62A1EB;
     padding-left: 16px;
 }
 
 
-.user-details .input-box select {
-    margin-top: 81px;
-    width: 878px;
+.button {
+    display: flex;
+    justify-content: right;
+    margin-top: 95px;
+    margin-right: 174px;
+    margin-bottom: 44px;
+}
+
+.btn-3 {
+    width: 176px;
     height: 60px;
     border-radius: 8px;
+    border: none;
+    background-color: var(--btnprimarycolor);
+    color: var(--btnsecondarycolor);
+    font-size: 20px;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 67px;
 }

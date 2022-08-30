@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Helvetica Neue';
+    font-family: 'HelveticaNeue';
     src: url(assets/fonts/HelveticaNeue.ttc);
 }
 
@@ -8,9 +8,12 @@
     --secondarycolor: #fff;
 }
 
+* {
+    font-family: 'HelveticaNeue';
+}
+
 body {
     margin: 0;
-    font-family: 'HelveticaNeue';
     overflow-x: hidden;
 }
 
