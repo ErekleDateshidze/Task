@@ -1,0 +1,94 @@
+:root {
+    --primarycolor: #F6F6F6;
+    --secondarycolor: #fff;
+    --arrowbutton: #D9D9D9;
+    --btnprimarycolor: #62A1EB;
+    --btnsecondarycolor: #fff;
+    --bordercolor: #8AC0E2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+body {
+    font-family: 'HelveticaNeue';
+    background-color: var(--primarycolor);
+    max-width: 1920px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav .container ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav .container ul li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-left: 61px;
+    margin-bottom: 42px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+header a {
+    margin-left: 70px;
+    margin-top: 53px;
+}
+
+section {
+    width: 1226px;
+    height: 1571px;
+    margin-left: 347px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondarycolor);
+}
+
+.drag-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 878px;
+    height: 423px;
+    background-color: var(--primarycolor);
+    margin-top: 68px;
+    border-radius: 18px;
+    border: 2px dashed #4386A9;
+}
+
+
+.button {
+    width: 233px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--btnprimarycolor);
+    color: var(--btnsecondarycolor);
+    font-size: 20px;
+    margin-top: 65px;
+    cursor: pointer;
+}

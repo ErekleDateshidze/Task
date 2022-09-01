@@ -30,34 +30,34 @@ function showTeams(teams) {
 
 
 
-const API_URL2 = 'https://pcfy.redberryinternship.ge/api/positions'
+// const API_URL2 = 'https://pcfy.redberryinternship.ge/api/positions'
 
-const select2 = document.getElementById('select-position')
+// const select2 = document.getElementById('select-position')
 
-getPositions(API_URL2)
+// getPositions(API_URL2)
 
 
 
-async function getPositions(url) {
-    const res = await fetch(url)
-    const data = await res.json()
-    showPositions(data)
-}
+// async function getPositions(url) {
+//     const res = await fetch(url)
+//     const data = await res.json()
+//     showPositions(data)
+// }
 
-function showPositions(positions) {
-    select.innerHTML = ''
-    positions.data.forEach((position) => {
+// function showPositions(positions) {
+//     select.innerHTML = ''
+//     positions.data.forEach((position) => {
 
-        const { name } = position
+//         const { name } = position
 
-        const posEl = document.createElement('option')
-        posEl.classList.add('position-option')
+//         const posEl = document.createElement('option')
+//         posEl.classList.add('position-option')
 
-        posEl.innerHTML = `
-        <option> ${name}</option>
-        `
+//         posEl.innerHTML = `
+//         <option> ${name}</option>
+//         `
 
-        select.appendChild(posEl)
-    })
-}
+//         select.appendChild(posEl)
+//     })
+// }
 
