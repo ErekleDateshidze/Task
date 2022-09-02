@@ -1,26 +1,63 @@
-const dragArea = document.querySelector('.drag-area');
-const dragText = document.querySelector('.drag');
+const dropArea = document.querySelector(".drag-area"),
+    button = dropArea.querySelector("button"),
+    input = dropArea.querySelector("input");
 
-//when file is inside drag area//
+
+let file; //this is a global variable and we'll use it inside multiple funcitons
 
 
-dragArea.addEventListener('dragover', (event) => {
+button.onclick = () => {
+    input.click(); //if user clikc onthe button then input is also clicked
+}
+
+input.addEventListener("change", function () {
+
+    //getting user select file [0] this means if user select multiple files then we'll select only the first one
+    file = this.files[0];
+    showFile();
+})
+
+
+//when user drags file over dragarea
+dropArea.addEventListener("dragover", (event) => {
     event.preventDefault();
-    dragText = 'Release to Upload';
+    console.log("File is over DragArea")
+})
+
+
+//when user drags file outside dragarea
+
+dropArea.addEventListener("dragleave", () => {
+    console.log("File is outside DragArea")
+})
+
+
+
+dropArea.addEventListener("drop", (event) => {
+    event.preventDefault(); //preventing from default behaviour
+    console.log("File is dropped on DragArea")
+    file = event.dataTransfer.files[0];
 });
 
+function showFile() {
+    let fileType = file.type;
+    console.log(fileType);
 
-//when file is leaves the drag area 
+    let validExtensions = ["image/jpeg", "image/jpg", "image/png"];  //adding some valid image extensions
 
-dragArea.addEventListener('dragleave', () => {
-});
+    if (validExtensions.includes(fileType)) {
+        let fileReader = new FileReader(); //creaing new file reader object
+        fileReader.onload = () => {
+            let fileURL = fileReader.result; //passing user file source in fileURL varaiable
+            let imgTag = `<img src="${fileURL}">` //creating and img tag and passing user selected file source isnide src  attribute
+            dropArea.innerHTML = imgTag; // adding that created img tag inside dropArea container
+        }
+        fileReader.readAsDataURL(file);
+    } else {
+        console.log("this is not an Image File");
+    }
+}
 
-
-//when file is dropped in drag area
-
-dragArea.addEventListener('drop', (event) => {
-    event.preventDefault();
-});
 
 
 
