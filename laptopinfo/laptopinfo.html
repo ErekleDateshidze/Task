@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- header & navigation bar  -->
     <header>
         <a href="#" target="_blank"><img src="img/arrow.png" alt=""></a>
         <nav class="nav-bar"> 
@@ -19,13 +21,41 @@
             </div>
         </nav>
     </header>
-    <section> 
+
+    <!-- drag and upload photo section -->
+
+    <section class="upload-bar"> 
             <div class="drag-area">
                 <h4 class="header">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</h3>
                 <button class="button">ატვირთე</button>
                 <input type="file" hidden>
             </div>     
     </section>
+
+    <!-- laptop info input section -->
+
+    <section>
+        <div class="laptop-info">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">ლეპტოპის სახელი</span>
+                        <input type="text" placeholder="HP">
+                        <p>ლათინური ასოები, ციფრები, !@#$%^&*()_+= </p>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="select">
+                        <select id="select-team">
+                            <option>თიმი</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
     <script src="laptopscript.js"> </script>
 </body>
 </html>

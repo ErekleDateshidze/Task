@@ -58,7 +58,7 @@ header a {
     margin-top: 53px;
 }
 
-section {
+.upload-bar {
     width: 1226px;
     height: 1571px;
     margin-left: 347px;
@@ -98,4 +98,29 @@ section {
     font-size: 20px;
     margin-top: 65px;
     cursor: pointer;
+}
+
+
+.laptop-info form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form .user-details .input-box {
+    margin-right: 63px;
+}
+
+.user-details .input-box .details {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.user-details .input-box input {
+    width: 407px;
+    height: 60px;
+    border-radius: 8px;
+    border-color: #62A1EB;
+    padding-left: 16px;
 }
