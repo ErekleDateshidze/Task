@@ -26,43 +26,43 @@
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">სახელი</span>
-                        <input type="text" placeholder="გრიშა">
-                        <p>მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
+                        <input id="name" type="text" placeholder="გრიშა">
+                        <p id="validation-name">მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
                     </div>
                     <div class="input-box">
                         <span class="details">გვარი</span>
-                        <input type="text" placeholder="ბაგრატიონი">
-                        <p>მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
+                        <input id="surname" type="text" placeholder="ბაგრატიონი">
+                        <p id="validation-surname">მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
                     </div>
                     <div class="input-box">
                         <div class="select">
-                            <select id="select-team">
-                                <option>თიმი</option>
+                            <select id="select-team"">
+                                <option selected disabled hidden>თიმი</option>
                             </select>
                         </div>
                     </div>
                     <div class="input-box">
                         <div class="select-box">
-                            <select id="select-position" class="positions">
-                                <option>პოზიცია</option>
+                            <select id="select-position" disabled class="positions">
+                                <option >პოზიცია</option>
                             </select>
                         </div>
                     </div>
                     <div class="input-box-long ">
                         <span class="details">მეილი</span>
-                        <input type="text" placeholder="grish666@redberry.ge" class="input-long">
-                        <p>უნდა მთავრდებოდეს @redberry.ge-ით</p>
+                        <input type="text" id="mail" placeholder="grish666@redberry.ge" class="input-long">
+                        <p id="validation-mail">უნდა მთავრდებოდეს @redberry.ge-ით</p>
                     </div>
                     <div class="input-box-long ">
-                        <span class="details">მეილი</span>
-                        <input type="text" placeholder="+995 598 00 07 01" class="input-long">
-                        <p>უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</p>
+                        <span class="details">ტელეფონის ნომერი</span>
+                        <input type="text" id="tel" placeholder="+995 598 00 07 01" class="input-long">
+                        <p id="validation-tel">უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</p>
                     </div>
                 </div>
             </form>
 
             <div class="button"> 
-                <button class="btn-3">შემდეგი</button>
+                <button class="btn-3" onclick="nextPage()">შემდეგი</button>
             </div>
         </div>
     </section>
