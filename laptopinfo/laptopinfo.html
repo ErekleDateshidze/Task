@@ -29,31 +29,82 @@
                 <h4 class="header">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</h3>
                 <button class="button">ატვირთე</button>
                 <input type="file" hidden>
-            </div>     
+            </div>   
+            
+            
+            <!-- laptop info input section -->
+
+            <div class="laptop-info">
+                <form action="#">
+                    <div class="user-details">                              
+                        <span class="details">ლეპტოპის სახელი</span>       
+                        <div class="laptop-details">      
+                            <div class="input-box">
+                                <input class="input-text" type="text" placeholder="HP">
+                                <p>ლათინური ასოები, ციფრები, !@#$%^&*()_+= </p>
+                            </div>   
+                            <div class="input-box">
+                                <div class="select">
+                                    <select id="select-brand">
+                                        <option>ლეპტოპის ბრენდი</option>
+                                    </select>
+                                </div>
+                            </div> 
+                        </div>                     
+                    </div>
+
+                    <div class="user-details">                                                        
+                        <div class="laptop-details">
+                            <div class="input-box-short">
+                                <div class="select" >
+                                    <select id="select-brand">
+                                        <option>ლეპტოპის ბრენდი</option>
+                                    </select>
+                                </div>
+                            </div>  
+                            <div class="input-box-short">
+                                <span class="details">ლეპტოპის სახელი</span>  
+                                <input class="input-text"  type="text" placeholder="14">
+                                <p>მხოლოდ ციფრები</p>
+                            </div>   
+                            <div class="input-box-short">
+                                <span class="details">ლეპტოპის სახელი</span>  
+                                <input type="text" placeholder="365">
+                                <p>მხოლოდ ციფრები</p>
+                            </div>      
+                        </div>                   
+                    </div>
+
+                    <div class="user-details">                                               
+                        <div class="laptop-details">      
+                            <div class="input-box">
+                                <span class="details">ლეპტოპის RAM (GB)</span>   
+                                <input  class="input-text"  type="text" placeholder="HP">
+                                <p>მხოლოდ ციფრები</p>
+                            </div>   
+                            <div class="input-box">
+                                <div class="select">
+                                    <span class="details">მეხსიერების ტიპი</span> 
+                                    <div class="radio-button">
+                                        <input  class="radio" type="radio" placeholder="HP" name="os" id="ssd">
+                                        <label for=""></label>
+                                        <input  class="radio" type="radio" placeholder="HP" name="os" id="hdd">
+                                    </div>   
+                                </div>
+                            </div> 
+                            
+                        </div>        
+                                     
+                    </div>
+                    
+                </form>
+                
+            </div>
+            
     </section>
 
-    <!-- laptop info input section -->
 
-    <section>
-        <div class="laptop-info">
-            <form action="#">
-                <div class="user-details">
-                    <div class="input-box">
-                        <span class="details">ლეპტოპის სახელი</span>
-                        <input type="text" placeholder="HP">
-                        <p>ლათინური ასოები, ციფრები, !@#$%^&*()_+= </p>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <div class="select">
-                        <select id="select-team">
-                            <option>თიმი</option>
-                        </select>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
+
 
 
     <script src="laptopscript.js"> </script>

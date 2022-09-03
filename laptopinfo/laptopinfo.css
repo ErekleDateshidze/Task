@@ -62,10 +62,10 @@ header a {
     width: 1226px;
     height: 1571px;
     margin-left: 347px;
-    display: flex;
-    justify-content: center;
     background-color: var(--secondarycolor);
+    padding: 68px 174px 68px 174px;
 }
+
 
 .drag-area {
     display: flex;
@@ -75,7 +75,7 @@ header a {
     width: 878px;
     height: 423px;
     background-color: var(--primarycolor);
-    margin-top: 68px;
+    margin: 68px auto;
     border-radius: 18px;
     border: 2px dashed #4386A9;
 }
@@ -100,16 +100,16 @@ header a {
     cursor: pointer;
 }
 
+span {
+    font-size: 18px;
+    font-weight: bold;
+}
 
-.laptop-info form .user-details {
+.laptop-details {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-form .user-details .input-box {
-    margin-right: 63px;
-}
 
 .user-details .input-box .details {
     display: block;
@@ -117,10 +117,54 @@ form .user-details .input-box {
     font-size: 18px;
 }
 
-.user-details .input-box input {
+.user-details .input-box .input-text {
     width: 407px;
     height: 60px;
     border-radius: 8px;
     border-color: #62A1EB;
     padding-left: 16px;
+}
+
+.input-box select {
+    padding: 16px;
+    line-height: 21px;
+    width: 407px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    background-color: #EBEBEB;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+.user-details .input-box-short .details {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.user-details .input-box-short .input-text {
+    width: 277px;
+    height: 60px;
+    border-radius: 8px;
+    border-color: #62A1EB;
+    padding-left: 16px;
+}
+
+.input-box-short select {
+    padding: 16px;
+    line-height: 21px;
+    width: 277px;
+    height: 60px;
+    border: none;
+    border-radius: 8px;
+    background-color: #EBEBEB;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
 }
