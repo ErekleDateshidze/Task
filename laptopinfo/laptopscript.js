@@ -60,10 +60,13 @@ function showFile() {
 
 
 const API_URL = 'https://pcfy.redberryinternship.ge/api/brands'
+const API_URL2 = 'https://pcfy.redberryinternship.ge/api/cpus'
 
 const selectBrand = document.getElementById('select-brand')
+const selectCpu = document.getElementById('select-cpu')
 
 getBrands(API_URL)
+getCpus(API_URL2)
 
 async function getBrands(url) {
     const res = await fetch(url)
@@ -78,6 +81,24 @@ function showBrands(brands) {
 
         selectBrand.innerHTML += `
         <option class="brands"> ${name}</option>
+        `
+
+    });
+
+}
+
+async function getCpus(url) {
+    const res = await fetch(url)
+    const data = await res.json()
+    showCpus(data)
+}
+
+function showCpus(cpus) {
+    cpus.data.forEach((cpu) => {
+        const { name } = cpu
+
+        selectCpu.innerHTML += `
+        <option class="cpus"> ${name}</option>
         `
 
     });
