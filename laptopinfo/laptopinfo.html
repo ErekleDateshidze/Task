@@ -53,30 +53,34 @@
                         </div>                     
                     </div>
 
+                    <hr>
+
                     <div class="user-details">                                                        
                         <div class="laptop-details">
-                            <div class="input-box-short">
+                            <div class="input-box-short-select">
                                 <div class="select" >
+                                    <span class="details"></span>  
                                     <select id="select-brand">
-                                        <option>ლეპტოპის ბრენდი</option>
+                                        <option>CPU</option>
                                     </select>
                                 </div>
                             </div>  
                             <div class="input-box-short">
-                                <span class="details">ლეპტოპის სახელი</span>  
+                                <span class="details">CPU-ს ბირთვი </span>  
                                 <input class="input-text"  type="text" placeholder="14">
                                 <p>მხოლოდ ციფრები</p>
                             </div>   
+
                             <div class="input-box-short">
-                                <span class="details">ლეპტოპის სახელი</span>  
-                                <input type="text" placeholder="365">
+                                <span class="details">CPU-ს ნაკადი </span>  
+                                <input class="input-text"  type="text" placeholder="365">
                                 <p>მხოლოდ ციფრები</p>
-                            </div>      
+                            </div>   
                         </div>                   
                     </div>
 
                     <div class="user-details">                                               
-                        <div class="laptop-details">      
+                        <div class="laptop-details-ram-radio">      
                             <div class="input-box">
                                 <span class="details">ლეპტოპის RAM (GB)</span>   
                                 <input  class="input-text"  type="text" placeholder="HP">
@@ -87,26 +91,60 @@
                                     <span class="details">მეხსიერების ტიპი</span> 
                                     <div class="radio-button">
                                         <input  class="radio" type="radio" placeholder="HP" name="os" id="ssd">
-                                        <label for=""></label>
-                                        <input  class="radio" type="radio" placeholder="HP" name="os" id="hdd">
+                                        <span class="radio-title">SSD</span>
+                                        <input  class="radio-hdd" type="radio" placeholder="HP" name="os" id="hdd">
+                                        <span class="radio-title">HDD</span>
                                     </div>   
                                 </div>
-                            </div> 
-                            
-                        </div>        
-                                     
+                            </div>                            
+                        </div>                                            
                     </div>
                     
-                </form>
-                
-            </div>
+                    <hr>
+
+
+                    <div class="user-details">                                                        
+                        <div class="laptop-details">
+                            <div class="input-box">
+                                <span class="details">შეძენის რიცხვი(არჩევითი)</span>  
+                                <input class="input-text"  type="text" placeholder="დდ / თთ / წწწწ">
+                            </div>   
+
+                            <div class="input-box">
+                                <span class="details">ლეპტოპის ფასი</span>  
+                                <input class="input-text"  type="text" placeholder="0000">
+                                <p>მხოლოდ ციფრები</p>
+                            </div>   
+                        </div>   
+
+                     <div class="user-details">                                                        
+                        <div class="laptop-details-radio-condition">
+                            <div class="input-box">
+                                <div class="select">
+                                    <span class="details">ლეპტოპის მდგომარეობა</span> 
+                                    <div class="radio-button">
+                                        <input  class="radio" type="radio" placeholder="HP" name="os" id="ssd">
+                                        <span class="radio-title">ახალი</span>
+                                        <input  class="radio-hdd" type="radio" placeholder="HP" name="os" id="hdd">
+                                        <span class="radio-title">მეორადი</span>
+                                    </div>   
+                                </div>
+                            </div>           
+                        </div>   
+                </form>                     
+            </div>      
             
+            <div class="button-save"> 
+                <button class="btn-back">უკან</button>
+                <button class="btn-3">დამახსოვრება</button>
+            </div>    
     </section>
 
-
-
-
-
+    <footer>
+        <div class="footer">
+            <img src="img/logo2.png" alt="" class="logo">
+        </div>
+    </footer>
     <script src="laptopscript.js"> </script>
 </body>
 </html>

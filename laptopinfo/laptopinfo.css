@@ -63,7 +63,7 @@ header a {
     height: 1571px;
     margin-left: 347px;
     background-color: var(--secondarycolor);
-    padding: 68px 174px 68px 174px;
+    padding: 5px 174px 68px 174px;
 }
 
 
@@ -100,12 +100,25 @@ header a {
     cursor: pointer;
 }
 
-span {
+.details {
     font-size: 18px;
     font-weight: bold;
 }
 
 .laptop-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.laptop-details-ram-radio {
+    margin-top: 49px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.laptop-details-radio-condition {
+    margin-top: 54px;
     display: flex;
     justify-content: space-between;
 }
@@ -125,6 +138,8 @@ span {
     padding-left: 16px;
 }
 
+
+
 .input-box select {
     padding: 16px;
     line-height: 21px;
@@ -137,7 +152,6 @@ span {
     font-size: 18px;
     font-weight: bold;
 }
-
 
 
 
@@ -156,7 +170,8 @@ span {
     padding-left: 16px;
 }
 
-.input-box-short select {
+.input-box-short-select select {
+    margin-top: 33px;
     padding: 16px;
     line-height: 21px;
     width: 277px;
@@ -167,4 +182,73 @@ span {
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+}
+
+
+.radio-button {
+    display: flex;
+    padding: 16px;
+    line-height: 21px;
+    width: 407px;
+    height: 60px;
+}
+
+.radio {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    color: var(--bordercolor);
+}
+
+.radio-hdd {
+    display: flex;
+    margin-left: 111px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--bordercolor);
+    color: var(--bordercolor);
+}
+
+.radio-title {
+    display: flex;
+    margin-left: 18px;
+    font-size: 16px;
+}
+
+hr {
+    margin-top: 52px;
+    margin-bottom: 50px;
+}
+
+.btn-3 {
+    width: 219px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--btnprimarycolor);
+    color: var(--btnsecondarycolor);
+    font-size: 20px;
+}
+
+.btn-back {
+    width: 45px;
+    height: 21px;
+    border: none;
+    color: #62A1EB;
+    font-size: 18px;
+    background-color: var(--secondarycolor);
+    align-items: center;
+}
+
+.button-save {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 76px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+    margin-bottom: 52px;
 }

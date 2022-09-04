@@ -20,7 +20,7 @@
 
 body {
     font-family: 'HelveticaNeue';
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: var(--primarycolor);
     max-width: 1920px;
     max-height: 1080px;
@@ -189,5 +189,5 @@ form .user-details .input-box-long {
     display: flex;
     justify-content: center;
     margin-top: 67px;
-    margin-bottom: 45px;
+    padding-bottom: 42px;
 }
