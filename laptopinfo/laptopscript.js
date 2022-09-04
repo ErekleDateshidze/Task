@@ -59,5 +59,27 @@ function showFile() {
 }
 
 
+const API_URL = 'https://pcfy.redberryinternship.ge/api/brands'
+
+const selectBrand = document.getElementById('select-brand')
+
+getBrands(API_URL)
+
+async function getBrands(url) {
+    const res = await fetch(url)
+    const data = await res.json()
+    showBrands(data)
+}
 
 
+function showBrands(brands) {
+    brands.data.forEach((brand) => {
+        const { name } = brand
+
+        selectBrand.innerHTML += `
+        <option class="brands"> ${name}</option>
+        `
+
+    });
+
+}
