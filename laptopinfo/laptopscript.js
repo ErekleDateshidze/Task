@@ -7,7 +7,7 @@ let file; //this is a global variable and we'll use it inside multiple funcitons
 
 
 button.onclick = () => {
-    input.click(); //if user clikc onthe button then input is also clicked
+    input.click(); //if user click onthe button then input is also clicked
 }
 
 input.addEventListener("change", function () {

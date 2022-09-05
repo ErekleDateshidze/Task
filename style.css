@@ -1,7 +1,7 @@
-/* @font-face {
-    font-family: 'HelveticaNeue';
+@font-face {
+    font-family: HelveticaNeue;
     src: url(assets/fonts/HelveticaNeue.ttc);
-} */
+}
 
 :root {
     --primarycolor: #62A1EB;
@@ -9,7 +9,7 @@
 }
 
 * {
-    font-family: 'HelveticaNeue';
+    font-family: HelveticaNeue;
 }
 
 body {
@@ -52,3 +52,8 @@ header {
 .btn-2 {
     margin-top: 26px;
 }
+
+
+/* Responsive Design for small screens(IPHONE 13) */
+
+@media (max-width: 390px) {}

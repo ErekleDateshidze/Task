@@ -185,6 +185,13 @@ header a {
 }
 
 
+span .currecny img {
+    position: absolute;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
 .radio-button {
     display: flex;
     padding: 16px;
