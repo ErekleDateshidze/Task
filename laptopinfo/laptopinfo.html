@@ -11,7 +11,7 @@
 
     <!-- header & navigation bar  -->
     <header>
-        <a href="#" target="_blank"><img src="img/arrow.png" alt=""></a>
+        <a href="../employeinfo/employeinfo.html" target="_blank"><img src="img/arrow.png" alt=""></a>
         <nav class="nav-bar"> 
             <div class="container">
                 <ul>
@@ -25,120 +25,120 @@
     <!-- drag and upload photo section -->
 
     <section class="upload-bar"> 
-            <div class="drag-area">
-                <h4 class="header">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</h3>
-                <button class="button">ატვირთე</button>
-                <input type="file" hidden>
-            </div>   
+        <div class="drag-area">
+            <h4 class="header">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</h4>
+            <button class="button">ატვირთე</button>
+            <input type="file" hidden>
+        </div>
             
             
             <!-- laptop info input section -->
 
-            <div class="laptop-info">
-                <form action="#">
-                    <div class="user-details">                              
-                        <span class="details">ლეპტოპის სახელი</span>       
-                        <div class="laptop-details">      
-                            <div class="input-box">
-                                <input class="input-text" type="text" placeholder="HP">
-                                <p>ლათინური ასოები, ციფრები, !@#$%^&*()_+= </p>
-                            </div>   
-                            <div class="input-box">
-                                <div class="select">
-                                    <select id="select-brand">
-                                        <option selected disabled hidden value="ლეპტოპის ბრენდი" >ლეპტოპის ბრენდი</option>
-                                    </select>
-                                </div>
-                            </div> 
-                        </div>                     
+        <div class="laptop-info">
+            <div action="#">
+                <div class="user-details">
+                    <span class="details">ლეპტოპის სახელი</span>
+                    <div class="laptop-details">
+                        <div class="input-box">
+                            <input id="laptop-name" class="input-text" type="text" placeholder="HP">
+                            <p id="validation-laptop-name">ლათინური ასოები, ციფრები, !@#$%^&*()_+= </p>
+                        </div>
+                        <div class="input-box">
+                            <div class="select">
+                                <select id="select-brand">
+                                    <option selected disabled hidden value="ლეპტოპის ბრენდი" >ლეპტოპის ბრენდი</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <hr>
+                <hr>
 
-                    <div class="user-details">                                                        
-                        <div class="laptop-details">
-                            <div class="input-box-short-select">
-                                <div class="select" >
-                                    <span class="details"></span>  
-                                    <select id="select-cpu">
-                                        <option selected disabled hidden value="CPU">CPU</option>
-                                    </select>
-                                </div>
-                            </div>  
-                            <div class="input-box-short">
-                                <span class="details">CPU-ს ბირთვი </span>  
-                                <input class="input-text"  type="text" placeholder="14">
-                                <p>მხოლოდ ციფრები</p>
-                            </div>   
+                <div class="user-details">
+                    <div class="laptop-details">
+                        <div class="input-box-short-select">
+                            <div class="select" >
+                                <span class="details"></span>
+                                <select id="select-cpu">
+                                    <option selected disabled hidden value="CPU">CPU</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-box-short">
+                            <span class="details">CPU-ს ბირთვი </span>
+                            <input id="cpu-cores" class="input-text" type="text" placeholder="14">
+                            <p id="validation-cpu-cores">მხოლოდ ციფრები</p>
+                        </div>
 
-                            <div class="input-box-short">
-                                <span class="details">CPU-ს ნაკადი </span>  
-                                <input class="input-text"  type="text" placeholder="365">
-                                <p>მხოლოდ ციფრები</p>
-                            </div>   
-                        </div>                   
+                        <div class="input-box-short">
+                            <span class="details">CPU-ს ნაკადი </span>
+                            <input id="cpu-threads" class="input-text"  type="text" placeholder="365">
+                            <p id="validation-cpu-threads">მხოლოდ ციფრები</p>
+                        </div>
                     </div>
+                </div>
 
-                    <div class="user-details">                                               
-                        <div class="laptop-details-ram-radio">      
-                            <div class="input-box">
-                                <span class="details">ლეპტოპის RAM (GB)</span>   
-                                <input  class="input-text"  type="text" placeholder="HP">
-                                <p>მხოლოდ ციფრები</p>
-                            </div>   
-                            <div class="input-box">
-                                <div class="select">
-                                    <span class="details">მეხსიერების ტიპი</span> 
-                                    <div class="radio-button">
-                                        <input  class="radio" type="radio" placeholder="HP" name="os" id="ssd">
-                                        <span class="radio-title">SSD</span>
-                                        <input  class="radio-hdd" type="radio" placeholder="HP" name="os" id="hdd">
-                                        <span class="radio-title">HDD</span>
-                                    </div>   
+                <div class="user-details">
+                    <div class="laptop-details-ram-radio">
+                        <div class="input-box">
+                            <span class="details">ლეპტოპის RAM (GB)</span>
+                            <input id="ram" class="input-text"  type="text" placeholder="HP">
+                            <p id="validation-ram">მხოლოდ ციფრები</p>
+                        </div>
+                        <div class="input-box">
+                            <div class="select">
+                                <span class="details">მეხსიერების ტიპი</span>
+                                <div class="radio-button">
+                                    <input  class="radio" type="radio" value="SSD" placeholder="HP" name="memory" id="ssd">
+                                    <span class="radio-title">SSD</span>
+                                    <input  class="radio-hdd" type="radio" value="HDD" placeholder="HP" name="memory" id="hdd">
+                                    <span class="radio-title">HDD</span>
                                 </div>
-                            </div>                            
-                        </div>                                            
+                            </div>
+                        </div>
                     </div>
-                    
-                    <hr>
+                </div>
+
+                <hr>
 
 
-                    <div class="user-details">                                                        
-                        <div class="laptop-details">
-                            <div class="input-box">
-                                <span class="details">შეძენის რიცხვი(არჩევითი)</span>  
-                                <input class="input-text"  type="text" placeholder="დდ / თთ / წწწწ">
-                            </div>   
+                <div class="user-details">
+                    <div class="laptop-details">
+                        <div class="input-box">
+                            <span class="details">შეძენის რიცხვი(არჩევითი)</span>
+                            <input id="purchase-date" class="input-text"  type="date" placeholder="დდ / თთ / წწწწ">
+                        </div>
 
                             <div class="input-box">
                                 <span class="details">ლეპტოპის ფასი</span>  
-                                <input class="input-text"  type="text" placeholder="0000">
-                                <span class="currency"><img src="img/GEL_logo.png" alt=""></span> 
-                                <p>მხოლოდ ციფრები</p>
+                                <input id="price" class="input-text"  type="text" placeholder="0000">
+                                <span class="currency"><img src="img/GEL_logo.png" alt=""></span>
+                                <p id="validation-price">მხოლოდ ციფრები</p>
                             </div>   
                         </div>   
 
-                     <div class="user-details">                                                        
-                        <div class="laptop-details-radio-condition">
-                            <div class="input-box">
-                                <div class="select">
-                                    <span class="details">ლეპტოპის მდგომარეობა</span> 
-                                    <div class="radio-button">
-                                        <input  class="radio" type="radio" placeholder="HP" name="os" id="ssd">
-                                        <span class="radio-title">ახალი</span>
-                                        <input  class="radio-hdd" type="radio" placeholder="HP" name="os" id="hdd">
-                                        <span class="radio-title">მეორადი</span>
-                                    </div>   
+                 <div class="user-details">
+                    <div class="laptop-details-radio-condition">
+                        <div class="input-box">
+                            <div class="select">
+                                <span class="details">ლეპტოპის მდგომარეობა</span>
+                                <div class="radio-button">
+                                    <input  class="radio" type="radio" value="ახალი" placeholder="HP" name="condition" id="new">
+                                    <span class="radio-title">ახალი</span>
+                                    <input  class="radio-hdd" value="მეორადი" type="radio" placeholder="HP" name="condition" id="old">
+                                    <span class="radio-title">მეორადი</span>
                                 </div>
-                            </div>           
-                        </div>   
-                </form>                     
-            </div>      
-            
-            <div class="button-save"> 
-                <button class="btn-back">უკან</button>
-                <button class="btn-3">დამახსოვრება</button>
-            </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-save">
+            <a href="../employeinfo/employeinfo.html" ><button class="btn-back">უკან</button></a>
+            <button class="btn-3" onclick="submitForm()">დამახსოვრება</button>
+        </div>
     </section>
 
     <footer>

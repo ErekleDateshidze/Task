@@ -83,13 +83,14 @@ header a {
     margin: 68px auto;
     border-radius: 18px;
     border: 2px dashed #4386A9;
+    overflow: hidden;
 }
 
 
 .drag-area img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 5px;
 }
 
@@ -226,6 +227,20 @@ span .currecny img {
     margin-left: 18px;
     font-size: 16px;
 }
+
+.validation-input {
+    border: 1px solid #E52F2F !important;
+}
+
+.validation-text {
+    color: #E52F2F;
+
+}
+
+.validation-input[type='radio'] {
+    border: 1px solid #E52F2F !important;
+}
+
 
 hr {
     margin-top: 52px;

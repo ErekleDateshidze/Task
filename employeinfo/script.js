@@ -1,17 +1,37 @@
 const API_URL = 'https://pcfy.redberryinternship.ge/api/teams'
 const API_URL2 = 'https://pcfy.redberryinternship.ge/api/positions'
 
-const selectTeam = document.getElementById('select-team')
+const selectTeam = document.getElementById('select-team');
 const selectPosition = document.getElementById('select-position');
+let allTeams;
 let allPositions;
 
-getTeams(API_URL)
-getPositions(API_URL2)
+getTeams(API_URL);
+getPositions(API_URL2);
+getStoredInfo();
+
+function getStoredInfo() {
+    if (window.localStorage.getItem('name')) {
+        let storedInfoInputs = ['name', 'surname', 'select-team', 'select-position', 'mail', 'tel'];
+        storedInfoInputs.forEach(info => {
+            if (info === 'select-team' || info === 'select-position') {
+                document.getElementById(info).innerHTML += `
+                <option hidden selected disabled value="">${window.localStorage.getItem(info)}</option>
+                `
+                document.getElementById(info).removeAttribute('disabled');
+
+            } else {
+                document.getElementById(info).value = window.localStorage.getItem(info);
+            }
+        })
+    }
+}
 
 
 async function getTeams(url) {
     const res = await fetch(url)
-    const data = await res.json()
+    const data = await res.json();
+    allTeams = data;
     showTeams(data)
 }
 
@@ -40,7 +60,7 @@ function showPositions() {
             const { name } = position
 
             selectPosition.innerHTML += `
-            <option> ${name}</option>
+            <option value="${position.id}"> ${name}</option>
             `
         }
     })
@@ -50,7 +70,6 @@ async function getPositions(url) {
     const res = await fetch(url)
     const data = await res.json()
     allPositions = data
-    console.log(allPositions)
 }
 
 function validateNameAndSurname(fieldName) {
@@ -140,7 +159,46 @@ function nextPage() {
     validateTel('tel')
     let formValidationFailed = document.getElementsByClassName('validation-input').length
     if (!formValidationFailed) {
-        // go to next page
+        let selectedTeam;
+        let selectedPosition;
+        const name = document.getElementById('name').value;
+        const surname = document.getElementById('surname').value;
+        const teamId = document.getElementById('select-team').value;
+        const positionId = document.getElementById('select-position').value;
+        const mail = document.getElementById('mail').value;
+        const tel = document.getElementById('tel').value;
+
+
+        allTeams.data.forEach(teamFromApi => {
+            if (teamFromApi.id === +teamId) {
+                selectedTeam = teamFromApi.name;
+            }
+        })
+
+        allPositions.data.forEach(positionFromApi => {
+            if (positionFromApi.id === +positionId) {
+                selectedPosition = positionFromApi.name;
+            }
+        })
+
+        let fieldObj = {
+            'name': name,
+            'surname': surname,
+            'select-team': selectedTeam,
+            'select-team_id': teamId,
+            'select-position': selectedPosition,
+            'select-position_id': positionId,
+            'mail': mail,
+            'tel': tel,
+
+
+        }
+
+        for (const [key, value] of Object.entries(fieldObj)) {
+            window.localStorage.setItem(key, value);
+        }
+
+        window.location.href = '../laptopinfo/laptopinfo.html'
     }
 }
 
