@@ -1,3 +1,8 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(assets/fonts/HelveticaNeue.ttc);
+}
+
 :root {
     --primarycolor: #F6F6F6;
     --secondarycolor: #fff;
